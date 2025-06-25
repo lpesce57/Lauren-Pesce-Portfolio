@@ -4,15 +4,25 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lauren Pesce Portfolio</title>
+  <title>Lauren Pesce | Harry Potter Games</title>
+
   <link rel="icon" href="img/lp.png" type="image/png" />
   <link rel="stylesheet" href="style/style.css" />
+  <style>
+    /* Visually-hidden utility */
+    .sr-only{
+      position:absolute!important;
+      width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);border:0;
+    }
+  </style>
   <script defer src="js/script.js"></script>
 </head>
 <body>
 
   <a href="#main" id="skip">Skip to Main content</a>
 
+  <!-- Navigation -->
   <header class="nav">
     <div class="nav-left"><a href="index.html">Lauren Pesce</a></div>
     <nav class="nav-right" id="nav-menu">
@@ -23,79 +33,108 @@
     <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
 
+  <!-- Back link -->
   <a href="design.html" class="back-button">← Back</a>
 
   <main class="project-detail" id="main">
     <h1>Harry Potter Games</h1>
+    <h2 class="sr-only">Project Detail</h2>
 
-    <img src="img/hp.jpg" alt="Cover image of Harry Potter game website" style="width:100%;max-height:400px;object-fit:cover;border-radius:16px;margin:1.5rem 0;">
+    <!-- Cover image -->
+    <img src="img/hp.jpg"
+         alt=" "
+         style="width:100%;max-height:400px;object-fit:cover;border-radius:16px;margin:1.5rem 0;"/>
 
+    <!-- Meta data -->
     <section class="project-meta">
-      <p><strong>Description:</strong> A magical two-part game site featuring a 20-minute character guessing challenge and a spell duel against Professor Snape</p>
-      <p><strong>Class:</strong> SI 379: Building Interactive Applications</p>
+      <p><strong>Description:</strong> A magical two-part site featuring a 20-minute character-guessing challenge and a spell duel against Professor Snape.</p>
+      <p><strong>Class:</strong> SI 379 — Building Interactive Applications</p>
       <p><strong>Tools Utilized:</strong> HTML, CSS, JavaScript, HP-API, Groq API</p>
       <p><strong>Project Duration:</strong> April – May 2025</p>
-      <p><strong>Try Now:</strong> <a href="https://lpesce57.github.io/lpesce_379/harry-potter/" target="_blank" rel="noopener noreferrer">Live Website</a></p>
-    </section><br>
+      <p><strong>Explore Site:</strong> <a href="https://lpesce57.github.io/lpesce_379/harry-potter/" target="_blank" rel="noopener noreferrer">Live Demo</a></p>
+    </section>
 
+    <!-- Sections -->
     <h2>Problem Statement</h2>
-    <p>Our final project was to create any website we wanted that involved learning new skills and combining those with things
-        we had already learned throughout the semster. As a lifelong Harry Potter fan, I wondered how I could turn Harry Potter facts 
-        into an engaging and dynamic browser-based game experience that integrates external APIs and creative interactivity.</p><br>
+    <p>
+      For our final project, we were given full creative freedom to build a website that demonstrated new technical skills alongside concepts we’d learned throughout the semester.  
+      As a lifelong Harry Potter fan, I set out to transform Wizarding-world trivia into engaging, browser-based games powered by external APIs and creative interactivity.
+    </p>
 
     <h2>About the Course</h2>
-    <p>SI 379 focused on building interactive web applications using HTML, CSS, React and JavaScript. We explored a wide range of topics
-        from LocalStorage to learning to use package management software. Projects encouraged students to use real-world APIs and explore 
-        modern web development practices.</p><br>
+    <p>
+      SI 379 focuses on building interactive web applications with HTML, CSS, JavaScript, and React.  
+      Coursework covers topics such as LocalStorage, package management, and real-world API integration to practice modern development workflows.
+    </p>
 
     <h2>Analysis</h2>
-    <p>I explored multiple API integration options to bring interactivity and unpredictability to both games. I evaluated several Harry Potter-themed APIs before choosing HP-API and Groq for simplicity, usability, and impact. Testing also helped refine gameplay pacing and usability elements like input handling and timers.</p><br>
+    <p>
+      I explored several Harry Potter APIs before selecting HP-API (character & spell data) and Groq API (AI spell adjudication) for their simplicity and impact.  
+      Extensive console debugging and user-testing informed pacing, timer logic, and input handling.
+    </p>
 
-    <h2>Analysis Methods</h2>
-    <p>Prototype testing, debugging via console logs, and iterative UI feedback based on instructor comments helped shape both the character guessing grid and the duel functionality. JSON parsing and console validation were crucial throughout.</p><br>
+    <h3>Analysis Methods</h3>
+    <p>
+      Prototype testing, console logging, and iterative UI reviews guided refinement of the character-guessing grid and duel mechanics.  
+      JSON parsing and responsive-design checks ensured smooth gameplay across devices.
+    </p>
 
     <h2>Design</h2>
-    <p>The design is inspired by the Marauder’s Map aesthetic. The homepage presents both games with short descriptions and options to begin playing. I added animations, color schemes, confetti, health bars, and hover effects enhance the experience.</p><br>
+    <p>
+      The visual theme draws from the Marauder’s Map.  
+      The landing page presents both games with concise descriptions and entry points.  
+      Animations, confetti bursts, health bars, and hover states amplify the playful tone.
+    </p>
 
     <h2>Design Evolution</h2>
-    <p>Originally, the duel had no visual health bar and no AI decision-making. After some deliberation and various iterations, I implemented Groq API logic and created a responsive health bar. For the guessing game, early versions didn’t support nicknames or the pause/resume button. These features were added to increase user experience.</p><br>
+    <p>
+      The duel originally lacked a health bar and AI logic.  
+      Iterations introduced the Groq API for spell resolution and a responsive health bar for clarity.  
+      In the guessing game, nickname recognition and pause/resume functionality were added to improve usability and engagement.
+    </p>
 
     <h2>Key Design Decisions</h2>
     <ul>
-      <li>Used Groq API to determine the winner of duels based on spell comparisons</li>
-      <li>HP-API powered the character dataset and spell library</li>
-      <li>Built custom timer logic with pause and resume functionality</li>
-      <li>Added visual feedback like confetti and character images</li>
-      <li>Responsive layout and input error handling for accessibility</li>
-    </ul><br>
+      <li>Groq API decides duel outcomes based on spell comparisons.</li>
+      <li>HP-API supplies character data and spell lists.</li>
+      <li>Custom timer logic with pause/resume for the guessing challenge.</li>
+      <li>Visual feedback (confetti, character images) celebrates milestones.</li>
+      <li>Accessible inputs, error messaging, and responsive layout.</li>
+    </ul>
 
-    <img src="img/hp_game.jpg" alt="Sample screen from spell duel game" style="width:100%;max-width:800px;border-radius:12px;margin:2rem 0;display:block;margin-left:auto;margin-right:auto;">
+    <!-- Supplementary image -->
+    <img src="img/hp_game.jpg"
+         alt="Screenshot of the spell-duel interface showing health bars and spell input"
+         style="width:100%;max-width:800px;border-radius:12px;margin:2rem auto;display:block;"/>
 
     <h2>Final Result</h2>
-    <p>Two fully functional browser games built from scratch. One lets users guess Harry Potter characters with a 20-minute timer and input validation. The other is a dynamic duel against Snape using AI.
-    </p><br>
+    <p>
+      Two fully functional browser games:  
+      a timed character-guessing challenge and an AI-driven spell duel against Snape — both built from scratch and optimized for desktop and mobile.
+    </p>
 
-    <a href="design.html" class="back-button">← Back</a>
+    <!-- Secondary back link -->
+    <a href="design.html" class="back-button" style="margin-top:2rem;">← Back</a>
   </main>
 
- <!-- Footer -->
- <footer>
+  <!-- Footer -->
+  <footer>
     <p>LAUREN PESCE</p>
     <div class="contact-icons">
       <a href="mailto:pesceelauren@gmail.com" aria-label="Email">
-        <!-- Email Icon (footer) -->
+        <!-- Email icon -->
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
-          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
-          xmlns="http://www.w3.org/2000/svg">
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+             xmlns="http://www.w3.org/2000/svg">
           <path d="m2.357 7.714 6.98 4.654c.963.641 1.444.962 1.964 1.087.46.11.939.11 1.398 0 .52-.125 1.001-.446 1.964-1.087l6.98-4.654M7.157 19.5h9.686c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.31-1.311c.328-.642.328-1.482.328-3.162V9.3c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311c-.642-.327-1.482-.327-3.162-.327H7.157c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.31 1.311c-.328.642-.328 1.482-.328 3.162v5.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311c.642.327 1.482.327 3.162.327"/>
         </svg>
       </a>
 
       <a href="https://www.linkedin.com/in/laurenpesce/" target="_blank" aria-label="LinkedIn">
-        <!-- LinkedIn Icon (footer) -->
+        <!-- LinkedIn icon -->
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
-          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
-          xmlns="http://www.w3.org/2000/svg">
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+             xmlns="http://www.w3.org/2000/svg">
           <path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5"/>
           <path d="M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2 1.6 0 1.6 1.375 1.6 2.875v2"/>
         </svg>
