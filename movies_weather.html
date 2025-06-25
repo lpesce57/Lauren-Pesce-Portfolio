@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lauren Pesce Portfolio</title>
+  <link rel="icon" href="img/lp.png" type="image/png" />
+  <link rel="stylesheet" href="style/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <a href="#main" id="skip">Skip to Main Content</a>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-left"><a href="index.html">Lauren Pesce</a></div>
+    <nav class="nav-right" id="nav-menu">
+      <a href="about_me.html">About Me</a>
+      <a href="design.html">Design Projects</a>
+      <a href="writing.html">Written Work</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <!-- Back button -->
+  <a href="design.html" class="back-button">← Back</a>
+
+  <main class="project-detail" id="main">
+    <h1>Movie & Weather API Data Analysis</h1>
+
+    <!-- Hero image -->
+    <img src="img/movies.jpg" alt="Collage of weather icons and film reels" style="width:100%;max-height:400px;object-fit:cover;border-radius:16px;margin:1.5rem 0;"/>
+
+    <!-- KEY INFO GRID -->
+    <section class="project-meta">
+      <p><strong>Description:</strong> A Python data analysis project exploring relationships between film release success and weather conditions in Ann Arbor using multiple APIs.</p>
+      <p><strong>Class:</strong> SI 206: Data-Oriented Programming</p>
+      <p><strong>Tools Utilized:</strong> Python, SQL, JSON, Matplotlib, Rotten Tomatoes API, OMDB API, IMDB API, OpenWeather API</p>
+      <p><strong>Project Duration:</strong> November – December 2023</p>
+      <p><strong>My Role:</strong> Team member in a group of 3 — independently handled API data cleaning, merging, and correlation analysis</p>
+      <p><strong>View Code:</strong> <a href="https://github.com/lpesce57/SI206_final_project" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+    </section><br>
+
+    <!-- Outline Sections -->
+    <h2>Problem Statement</h2>
+    <p>
+      This project aimed to explore whether weather conditions could be a factor in movie popularity by comparing Ann Arbor’s weather the day of a movie release to box office success and movie ratings. We used API data to find patterns in how weather on release day might influence how well movies are received.
+    </p><br>
+
+    <h2>About the Course</h2>
+    <p>
+      SI 206 is the University of Michigan’s introduction to Python programming and data-driven development. Students learn how to work with APIs, databases, and data visualization libraries to solve real-world problems using clean, modular code.
+    </p><br>
+
+    <h2>Data Sources & Analysis</h2>
+    <p>
+      I accessed four APIs: one for current and historical weather data, and three for movie ratings and metadata to attempt to limit any potential bias. I wrote scripts to clean, merge, and store this data in a SQLite database, using SQL queries to join weather with movies released on that date. After processing, I used Python’s Matplotlib to visualize the data and analyze correlations.
+    </p><br>
+
+    <h3>Correlation Between Duration and Rating</h3>
+    <figure style="text-align:center;margin:2rem 0;">
+      <img src="img/duration.png" alt="Scatterplot graph showing movie duration versus rating" style="max-width:600px;width:90%;border-radius:12px;" />
+      <figcaption style="font-size:.9rem;color:#555;">Scatterplot suggesting a weak correlation between duration and Movie rating.</figcaption>
+    </figure>
+
+    <h2>Key Findings</h2>
+    <ul>
+      <li>Weather had minimal correlation with user rating or box office success — however, cold temperatures slightly aligned with higher rated movies.</li>
+      <li>Movie duration had a weak positive correlation with rating, though outliers were present.</li>
+      <li>Data analysis required significant preprocessing due to differences in formatting and API data structure.</li>
+    </ul><br>
+
+    <h2>Final Result</h2>
+    <p>
+      The project successfully demonstrated the ability to use multiple APIs, clean and store data efficiently, and perform basic statistical analysis with visualizations. You can <a href="https://github.com/lpesce57/SI206_final_project/blob/main/README.md" target="_blank" rel="noopener noreferrer">read the full README here</a> for more technical implementation details.
+    </p>
+
+    <!-- Back button at bottom -->
+    <a href="design.html" class="back-button">← Back</a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>LAUREN PESCE</p>
+    <div class="contact-icons">
+      <a href="mailto:pesceelauren@gmail.com" aria-label="Email">
+        <!-- Email Icon (footer) -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="m2.357 7.714 6.98 4.654c.963.641 1.444.962 1.964 1.087.46.11.939.11 1.398 0 .52-.125 1.001-.446 1.964-1.087l6.98-4.654M7.157 19.5h9.686c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.31-1.311c.328-.642.328-1.482.328-3.162V9.3c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311c-.642-.327-1.482-.327-3.162-.327H7.157c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.31 1.311c-.328.642-.328 1.482-.328 3.162v5.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311c.642.327 1.482.327 3.162.327"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/laurenpesce/" target="_blank" aria-label="LinkedIn">
+        <!-- LinkedIn Icon (footer) -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5"/>
+          <path d="M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2 1.6 0 1.6 1.375 1.6 2.875v2"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

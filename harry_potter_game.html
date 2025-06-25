@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lauren Pesce Portfolio</title>
+  <link rel="icon" href="img/lp.png" type="image/png" />
+  <link rel="stylesheet" href="style/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+
+  <a href="#main" id="skip">Skip to Main content</a>
+
+  <header class="nav">
+    <div class="nav-left"><a href="index.html">Lauren Pesce</a></div>
+    <nav class="nav-right" id="nav-menu">
+      <a href="about_me.html">About Me</a>
+      <a href="design.html">Design Projects</a>
+      <a href="writing.html">Written Work</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <a href="design.html" class="back-button">← Back</a>
+
+  <main class="project-detail" id="main">
+    <h1>Harry Potter Games</h1>
+
+    <img src="img/hp.jpg" alt="Cover image of Harry Potter game website" style="width:100%;max-height:400px;object-fit:cover;border-radius:16px;margin:1.5rem 0;">
+
+    <section class="project-meta">
+      <p><strong>Description:</strong> A magical two-part game site featuring a 20-minute character guessing challenge and a spell duel against Professor Snape</p>
+      <p><strong>Class:</strong> SI 379: Building Interactive Applications</p>
+      <p><strong>Tools Utilized:</strong> HTML, CSS, JavaScript, HP-API, Groq API</p>
+      <p><strong>Project Duration:</strong> April – May 2025</p>
+      <p><strong>Try Now:</strong> <a href="https://lpesce57.github.io/lpesce_379/harry-potter/" target="_blank" rel="noopener noreferrer">Live Website</a></p>
+    </section><br>
+
+    <h2>Problem Statement</h2>
+    <p>Our final project was to create any website we wanted that involved learning new skills and combining those with things
+        we had already learned throughout the semster. As a lifelong Harry Potter fan, I wondered how I could turn Harry Potter facts 
+        into an engaging and dynamic browser-based game experience that integrates external APIs and creative interactivity.</p><br>
+
+    <h2>About the Course</h2>
+    <p>SI 379 focused on building interactive web applications using HTML, CSS, React and JavaScript. We explored a wide range of topics
+        from LocalStorage to learning to use package management software. Projects encouraged students to use real-world APIs and explore 
+        modern web development practices.</p><br>
+
+    <h2>Analysis</h2>
+    <p>I explored multiple API integration options to bring interactivity and unpredictability to both games. I evaluated several Harry Potter-themed APIs before choosing HP-API and Groq for simplicity, usability, and impact. Testing also helped refine gameplay pacing and usability elements like input handling and timers.</p><br>
+
+    <h2>Analysis Methods</h2>
+    <p>Prototype testing, debugging via console logs, and iterative UI feedback based on instructor comments helped shape both the character guessing grid and the duel functionality. JSON parsing and console validation were crucial throughout.</p><br>
+
+    <h2>Design</h2>
+    <p>The design is inspired by the Marauder’s Map aesthetic. The homepage presents both games with short descriptions and options to begin playing. I added animations, color schemes, confetti, health bars, and hover effects enhance the experience.</p><br>
+
+    <h2>Design Evolution</h2>
+    <p>Originally, the duel had no visual health bar and no AI decision-making. After some deliberation and various iterations, I implemented Groq API logic and created a responsive health bar. For the guessing game, early versions didn’t support nicknames or the pause/resume button. These features were added to increase user experience.</p><br>
+
+    <h2>Key Design Decisions</h2>
+    <ul>
+      <li>Used Groq API to determine the winner of duels based on spell comparisons</li>
+      <li>HP-API powered the character dataset and spell library</li>
+      <li>Built custom timer logic with pause and resume functionality</li>
+      <li>Added visual feedback like confetti and character images</li>
+      <li>Responsive layout and input error handling for accessibility</li>
+    </ul><br>
+
+    <img src="img/hp_game.jpg" alt="Sample screen from spell duel game" style="width:100%;max-width:800px;border-radius:12px;margin:2rem 0;display:block;margin-left:auto;margin-right:auto;">
+
+    <h2>Final Result</h2>
+    <p>Two fully functional browser games built from scratch. One lets users guess Harry Potter characters with a 20-minute timer and input validation. The other is a dynamic duel against Snape using AI.
+    </p><br>
+
+    <a href="design.html" class="back-button">← Back</a>
+  </main>
+
+ <!-- Footer -->
+ <footer>
+    <p>LAUREN PESCE</p>
+    <div class="contact-icons">
+      <a href="mailto:pesceelauren@gmail.com" aria-label="Email">
+        <!-- Email Icon (footer) -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="m2.357 7.714 6.98 4.654c.963.641 1.444.962 1.964 1.087.46.11.939.11 1.398 0 .52-.125 1.001-.446 1.964-1.087l6.98-4.654M7.157 19.5h9.686c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.31-1.311c.328-.642.328-1.482.328-3.162V9.3c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311c-.642-.327-1.482-.327-3.162-.327H7.157c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.31 1.311c-.328.642-.328 1.482-.328 3.162v5.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311c.642.327 1.482.327 3.162.327"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/laurenpesce/" target="_blank" aria-label="LinkedIn">
+        <!-- LinkedIn Icon (footer) -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5"/>
+          <path d="M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2 1.6 0 1.6 1.375 1.6 2.875v2"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
