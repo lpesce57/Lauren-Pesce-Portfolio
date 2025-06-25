@@ -1,0 +1,243 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #main {
+    margin: 15px;
+    min-height: 80vh;
+}
+
+.nav, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: white;
+    color: #161515;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 1200px; 
+    padding: 20px; 
+  }
+
+  img {
+    height: 30px;
+  }
+
+  #skip {
+    position: absolute;
+    left: -500px;
+}
+  
+#skip:focus {
+    left: 200px;
+}
+  
+  /* Typography */
+  h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  /* Navigation */
+  .nav {
+    background-color: #d9f0ff;
+    color: #161515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+  
+  .nav-left {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-right a, .nav-left a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #161515;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-right a:hover {
+    color: #83c9f4;
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Hero */
+  .home-hero {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 0 1rem;
+  }
+  
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .contact-icons svg {
+    stroke: #161515;
+    transition: stroke 0.3s ease;
+  }
+  
+  .contact-icons svg:hover {
+    stroke: #83c9f4;
+    cursor: pointer;
+  }
+  
+  /* Current Project Section */
+  .current-project {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .project-card {
+    margin-top: 2rem;
+    background-color: #a3d5ff;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .project-left {
+    text-align: left;
+  }
+  
+  .project-right button {
+    padding: 0.5rem 1.2rem;
+    background-color: #83c9f4;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-right button:hover {
+    background-color: #a3d5ff;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #d9f0ff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+  }
+  
+  footer p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Writing Piece Pages */
+.writing-piece {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .writing-piece h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .nav-right {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 2rem;
+      background-color: #d9f0ff;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  
+    .nav-right a {
+      margin: 0.5rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .card-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .project-right {
+      align-self: flex-end;
+    }
+  }
+  
