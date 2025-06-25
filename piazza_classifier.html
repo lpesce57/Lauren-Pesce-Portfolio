@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piazza Machine-Learning Post Classifier – Lauren Pesce</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <a href="#main" id="skip">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-left"><a href="index.html">Lauren Pesce</a></div>
+    <nav class="nav-right" id="nav-menu">
+      <a href="about_me.html">About Me</a>
+      <a href="design.html">Design Projects</a>
+      <a href="writing.html">Written Work</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <!-- Back button -->
+  <a href="design.html" class="back-button">← Back</a>
+
+  <!-- Main -->
+  <main id="main" class="project-detail">
+    <h1>Piazza Machine-Learning Post Classifier</h1>
+
+    <!-- Hero -->
+    <img src="img/piazza.jpg"
+         alt="Hero collage of the Piazza classifier project"
+         style="width:100%;max-height:400px;object-fit:cover;border-radius:16px;margin:1.5rem 0;" />
+
+    <!-- Meta -->
+    <section class="project-meta">
+      <p><strong>Description:</strong> A C++ text-classification tool that automatically labels Piazza discussion-board posts by topic.</p>
+      <p><strong>Class:</strong> EECS 280 – Programming &amp; Data Structures</p>
+      <p><strong>Tools Utilized:</strong> C++, STL, Xcode / clang++</p>
+      <p><strong>Project Duration:</strong> Nov – Dec 2023</p>
+      <p><strong>My Role:</strong> Solo developer &amp; algorithm designer (built on minimal starter code)</p>
+      <p><strong>Project Requirements:</strong>
+         <a href="https://eecs280staff.github.io/ml-classifier/" target="_blank">View specifications</a>
+      </p><br>
+    </section>
+
+    <!-- Sections -->
+    <h2>Problem Statement</h2>
+    <p>
+      Piazza threads for large courses quickly become cluttered. Students struggle to locate answers and instructors lose time
+      responding to duplicate questions. An automatic classifier can streamline this process, eliminating extra time spent by both students and professors.
+    </p><br>
+
+    <h2>About&nbsp;the&nbsp;Course</h2>
+    <p>
+      EECS 280 is Michigan’s foundational C++ course. After CS introductory course, students tackle larger projects that combine data structures,
+      algorithms, and clean software engineering in real-world scenarios.
+    </p><br>
+
+    <h2>Behind&nbsp;the&nbsp;Execution</h2>
+    <p>
+      I first re-implemented Binary Search Tree and Map classes from scratch to learn their internals, then swapped to the STL
+      <code>unordered_map</code> for performance in the final classifier. The core class trains on a CSV using a
+      <em>bag-of-words</em> model: word order is ignored, but token frequencies per label are tracked. It outputs log-prior and
+      log-likelihood values in debug mode and predicts labels for unseen posts with a log-probability score.
+    </p><br>
+
+    <h3>Running&nbsp;from&nbsp;the&nbsp;Command Line</h3>
+    <p>
+        This program takes in several different arguments: a training file, a testing file and the option of having a "debug mode" activated. The training and test files contain a topic from a Piazza post (online question platform) and the words utilized in the post. If debug mode is enabled, it provides more information about the training data.
+        How it was Executed: The project guidelines had us begin by creating our own Binary Search Tree and Map classes to gain a better understanding about how the two worked. However, for efficiency in the main classifier, we used the map library included with C++. 
+    </p><br>
+
+    <!-- Test-case image -->
+    <figure style="text-align:center;margin:2rem 0;">
+      <img src="img/piazza_test.png"
+           alt="Terminal output showing 90 % accuracy"
+           style="max-width:600px;width:90%;border-radius:12px;" />
+      <figcaption style="font-size:.9rem;color:#555;">
+        Sample evaluation run hitting&nbsp;≈&nbsp;90 % accuracy.
+      </figcaption>
+    </figure>
+
+    <h2>Code Distribution &amp; Final Results</h2>
+    <p>
+      The classifier achieved <strong>≈ 90 % accuracy</strong> on the blind dataset and scored <strong>100 %</strong> on the course
+      autograder. Course policy forbids publishing code derived from the starter kit, but I can demo the project on request.
+    </p><br>
+  </main>
+
+  <!-- Bottom back button -->
+  <a href="design.html" class="back-button">← Back</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>LAUREN PESCE</p>
+    <div class="contact-icons">
+      <a href="mailto:pesceelauren@gmail.com" aria-label="Email">
+        <!-- Email icon -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d='m2.357 7.714 6.98 4.654c.963.641 1.444.962 1.964 1.087.46.11.939.11 1.398 0 .52-.125 1.001-.446 1.964-1.087l6.98-4.654M7.157 19.5h9.686c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.31-1.311c.328-.642.328-1.482.328-3.162V9.3c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311c-.642-.327-1.482-.327-3.162-.327H7.157c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.31 1.311c-.328.642-.328 1.482-.328 3.162v5.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311c.642.327 1.482.327 3.162.327'/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/laurenpesce/" target="_blank" aria-label="LinkedIn">
+        <!-- LinkedIn icon -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d='M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5'/><path d='M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2 1.6 0 1.6 1.375 1.6 2.875v2'/></svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

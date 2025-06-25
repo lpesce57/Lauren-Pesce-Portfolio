@@ -11,10 +11,13 @@
 }
 
 .nav, footer {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;   /* pull full-bleed */
+  margin-right: -50vw;
+}
   
   body {
     font-family: 'Helvetica Neue', sans-serif;
@@ -24,10 +27,6 @@
     margin: 0 auto;
     max-width: 1200px; 
     padding: 20px; 
-  }
-
-  img {
-    height: 30px;
   }
 
   #skip {
@@ -132,17 +131,6 @@
     text-align: center;
   }
   
-  .project-card {
-    margin-top: 2rem;
-    background-color: #a3d5ff;
-    border-radius: 16px;
-    overflow: hidden;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-  }
   
   .project-card:hover {
     transform: scale(1.02);
@@ -150,17 +138,56 @@
   
   .project-card img {
     width: 100%;
-    height: auto;
+    height: 180px;
+    object-fit: cover;
     display: block;
   }
-  
-  .card-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    flex-wrap: wrap;
+
+/* smaller card & internal padding */
+.project-card{
+    background:#a3d5ff;
+    border-radius:16px;
+    overflow:hidden;
+    transition:transform .2s;
+    cursor:pointer;
+    max-width:340px;          /* keeps them compact on desktop */
+    margin:0 auto;            /* centre if grid leaves extra space */
   }
+
+  .card-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.2rem;           /* keeps text away from edges */
+    gap:1rem;
+    flex-wrap:wrap;
+  }
+  
+
+  /* ----------  PROJECT GRID  ---------- */
+.project-grid{
+    display:grid;
+    gap:2rem;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  }
+  
+/* NEW polished button */
+.project-right button{
+    padding:.5rem 1.4rem;
+    background:#fff;
+    color:#83c9f4;
+    border:2px solid #83c9f4;
+    border-radius:6px;
+    font-size:1rem;
+    font-weight:bold;
+    transition:.25s;
+  }
+  .project-right button:hover{
+    background:#83c9f4;
+    color:#fff;
+    cursor:pointer;
+  }
+  
   
   .project-left {
     text-align: left;
@@ -207,6 +234,44 @@
     font-size: 2rem;
     text-align: center;
   }
+
+  /* ----------  WRITING GRID  ---------- */
+.writing-list{
+    list-style:none;
+    display:grid;
+    gap:2rem;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    padding:0;
+  }
+  .writing-list li{
+    background:#a3d5ff;
+    color:#fff;
+    border-radius:16px;
+    padding:2rem 1.5rem;
+    text-align:center;
+    transition:transform .2s;
+  }
+  .writing-list li:hover{transform:scale(1.03);}
+  .writing-list a{
+    color:#161515;
+    text-decoration:none;
+    font-weight:bold;
+  }
+  
+  /* ----------  ABOUT ME IMAGES  ---------- */
+  .about-images{
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    margin:2rem 0;
+    flex-wrap:wrap;
+  }
+  .about-images img{
+    width: auto;
+    height: 280px;
+    border-radius:16px;
+    object-fit:cover;
+  }
   
   
   /* Responsive */
@@ -240,4 +305,112 @@
       align-self: flex-end;
     }
   }
+  
+
+/* ----------  MEDIA BREAKPOINTS  ---------- */
+@media(max-width:768px){
+  .project-grid{grid-template-columns:repeat(2,1fr);}
+  .writing-list{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+  .project-grid,
+  .writing-list{grid-template-columns:1fr;}
+}
+
+
+/* ----------  Base font tweaks ---------- */
+body{ line-height:1.5; font-size:18px; }
+h1{ font-size:2.25rem; margin-bottom:.6rem; }
+h2{ font-size:1.75rem; margin-bottom:.4rem; line-height:1.3; }
+h3{ font-size:1.25rem; margin-bottom:.3rem; line-height:1.3; }
+p { font-size:1rem; }   /* ~16 px */
+
+/* ----------  Project cards ---------- */
+.project-card{ max-width:340px; }           /* shorter cards */
+.project-card img{ height:180px; object-fit:cover; }
+.card-content{ padding:1.2rem; gap:.75rem; }
+.project-left h2{ margin-bottom:.25rem; }   /* tuck title closer */
+
+/* Inverse “Learn More” button */
+.project-right button{
+  padding:.5rem 1.4rem;
+  background:#fff;
+  color:#83c9f4;
+  border:2px solid #83c9f4;
+  border-radius:6px;
+  font-size:1rem;
+  font-weight:bold;
+  transition:.25s;
+}
+.project-right button:hover{ background:#83c9f4;color:#fff; }
+
+/* ----------  Resume button ---------- */
+.resume-button{
+  display:inline-block;
+  margin-top:1.5rem;
+  padding:.6rem 1.2rem;
+  background:#83c9f4;
+  color: rgb(22 21 21);
+  font-weight:bold;
+  border-radius:8px;
+  text-decoration:none;
+  transition:background-color .3s;
+}
+.resume-button:hover{ background:#a3d5ff; }
+
+/* Lightbox Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close:hover {
+    color: #ccc;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin: 1rem 0 2rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #161515;
+    text-decoration: none;
+    border: 2px solid #161515;
+    padding: 4px;
+    border-radius: 6px;
+    transition: 0.25s;
+  }
+  
+  .back-button:hover {
+    background-color: #161515;
+    color: white;
+  }
+  
   
